@@ -10,7 +10,6 @@ class Index extends Controller
     public function index()
     {
 
-		return "<h1>hello world!</h1>";
 		$User = new Vedio(); //实例化User对象
 
 		$info = $User->find();
