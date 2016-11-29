@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+<style type="text/css">
+    a{
+        text-decoration: none;
+    }
+</style>
+    <title></title>
+</head>
+<body>
+<h2>我的视频集合</h2>  <a href="/index/index/add">上传视频链接</a>
+    <table border="1" cellspacing="0">
+        <th>操作</th><th>上传时间</th><th>视频名称</th><th>URL地址</th>
+        {volist name="info" id="fo"}
+        <tr><td align="center"><a href="/index/index/del?id={$fo.id}">删 掉</a></td><td>{$fo.create_time|date="Y-m-d H:i:s",###}</td><td>{$fo.vname}</td><td>{$fo.vurl}</td></tr>
+        {/volist}
+    </table>
+</body>
+</html>
